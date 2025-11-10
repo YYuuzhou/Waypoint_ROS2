@@ -1,0 +1,33 @@
+# === ROS2 / Colcon ===
+build/
+install/
+log/
+
+# === Python 临时文件 ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+
+# === 编辑器 / 系统文件 ===
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# === 虚拟环境 ===
+.venv/
+venv/
+ENV/
+
+# === 临时数据 / 输出 ===
+*.csv
+*.zip
+*.bag
+data/
+scripts/data/
