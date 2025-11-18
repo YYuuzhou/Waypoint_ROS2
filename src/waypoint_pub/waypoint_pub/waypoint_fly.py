@@ -174,7 +174,6 @@ class WaypointFly(Node):
             print(f"reached waypoint {self.current_waypoint_index}, need to wait for {self.wait_after_reach:.0f} sec")
 
         #到达且等待时间到了 -切换到下一个点
-        # one more "if" here maybe, for future implementation . 1110
         elif (
             distance < self.threshold_distance
             and self.current_waypoint_index < len(self.waypoints) - 1

@@ -8,7 +8,7 @@
   <arg name="refresh_freq" default="1.0"/>
   <arg name="use_server_time" default="false"/>
   <arg name="broadcast_tf" default="true"/>
-  <arg name="sensor_data_qos_best_effort" default="true"/>
+  <!-- <arg name="sensor_data_qos_best_effort" default="true"/> -->
 
   <node pkg="vrpn_mocap" exec="client_node" name="vrpn_mocap_client_node" namespace="vrpn_mocap" output="screen">
     <param name="server" value="$(var server)"/>
@@ -18,9 +18,9 @@
     <param name="refresh_freq" value="$(var refresh_freq)"/>
     <param name="use_vrpn_timestamps" value="$(var use_server_time)"/>
     <param name="broadcast_tf" value="$(var broadcast_tf)"/>
-    <param name="sensor_data_qos" value="$(var sensor_data_qos_best_effort)"/>
+    <!-- <param name="sensor_data_qos" value="$(var sensor_data_qos_best_effort)"/> -->
 
-    <remap from="/vrpn_mocap/$(var drone_name)/pose"  to="/uav0/mavros/vision_pose/pose"/>
-    <remap from="/vrpn_mocap/$(var drone_name)/twist" to="/uav0/mavros/vision_speed/speed_vector"/>
+    <remap from="/vrpn_mocap/$(var drone_name)/pose"  to="/mavros/vision_pose/pose"/>
+    <remap from="/vrpn_mocap/$(var drone_name)/twist" to="/mavros/vision_speed/speed_vector"/>
   </node>
 </launch>

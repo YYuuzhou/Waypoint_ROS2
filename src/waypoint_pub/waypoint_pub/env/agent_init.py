@@ -110,8 +110,8 @@ class AgentInit:
         self.t0 = self.node.get_clock().now().nanoseconds * 1e-9
         self.current_time = self.node.get_clock().now()
 
-        # 命名空间组：与原版保持逻辑
-        self.group = "" if use_gazebo else "uav0/"
+        # 命名空间组:delete the multi uav 
+        self.group = "" if use_gazebo else ""
 
         # QoS（MAVROS 常用 BestEffort）
         sensor_qos = QoSProfile(

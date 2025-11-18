@@ -13,7 +13,6 @@ from .agent_init import AgentInit
 class UAV_ROS(AgentInit):
     """
     UAV ROS Control Class for state acquisition, dynamics calculation, control command publishing, and data logging
-    (ROS2 版：把 rospy.* 全部替换为 rclpy/node 接口，保持原 API)
     """
 
     def __init__(self, m: float = 0.72,
